@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="cache-control" content="max-age=600">
+    <title>智慧研学</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link type="image/x-icon" href="http://oi64e5wug.bkt.clouddn.com/logo.png" rel="shortcut icon"/>
+    <link type="text/css" rel="stylesheet" href="css/base.css?2017-01-0201"/>
+    <link type="text/css" rel="stylesheet" href="css/login.css?2017-01-0201"/>
+    <link type="text/css" rel="stylesheet" href="css/fullpage.min.css?2017-01-0201"/>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.js?2017-01-0201"></script>
+    <script type="text/javascript" src="js/fullPage.min.js?2017-01-0201"></script>
+    <script type="text/javascript" src="js/common.js?2017-01-0201"></script>
+    <script type="text/javascript" src="js/login.js?2017-01-0201"></script>
+    <style type="text/css">
+        .cl_login_fill > label {
+            width: 88px;
+            height: 28px;
+            line-height: 28px;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #EDEDED;
+            border-left: none;
+            border-radius: 0 3px 3px 0;
+            box-sizing: content-box;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container_login" id="container_login">
+    <div class="section">
+        <!--header-->
+        <div class="cl_head">
+            <div class="cl_head_in clearfix">
+                <a class="logo fl" href="javascript:void(0);"><span><img
+                        src="http://oi64e5wug.bkt.clouddn.com/zhyxTestLogo2.png" alt=""></span></a>
+                <dl class="help_info fr">
+                    <dd class="sc_display"><a class="d_app" href="">智慧研学APP下载</a>
+                    </dd>
+                    <dd class="c_line"></dd>
+                    <dd><a class="service" href="javascript:void(0);">客服电话：<b>400 000 0000</b></a></dd>
+                </dl>
+            </div>
+        </div>
+        <!--banner-->
+        <div class="cl_banner" id="imgPlay">
+            <ul class="imgList">
+                <li><a class="clb_2" href="javascript:void(0);"></a></li>
+                <li><a class="clb_3" href="javascript:void(0);"></a></li>
+            </ul>
+            <dl class="btnList">
+            </dl>
+            <div class="cl_login_box">
+                <!--错误提示的地儿-->
+                <p id="errorMsg"></p>
+                <div class="cl_login_head clearfix">
+                    <span>用户登录</span>
+                </div>
+                <div class="cl_login_fill" id="divLogin">
+                    <input id="txtUserName" name="txtUserName" class="u_name" type="text" autocomplete="off"
+                           placeholder="用户名"/>
+                    <input id="txtPassword" name="txtPassword" class="u_pwd" type="password" autocomplete="off"
+                           placeholder="请输入验证码" style="width: 125px;border-radius: 3px 0 0 3px;display: inline-block;"/><label>发送验证码</label>
+                    <div class="pwd_remember mt10 clearfix">
+                        <div class="lost_pwd fr"><a href="" id="forget_password">忘记密码？</a></div>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" id="signup_button">登 录</a>
+                <div class="download_app_box">
+                    <p class="note_msg">温馨提示：学生用户，用户名为手机号，登录密码为手机验证码，请使用注册时的手机号登录。</p>
+                    <div class="">
+                        <p class="download_text">点击下载APP<br>随时随地随心学！</p>
+                        <div style="overflow: hidden;height: 80px;width: 80px;float: left;"><img style="width: 80px;height: 80px;" src="images/bdkjEr.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <a class="down_more" id="downMore" href="javascript:void(0);"></a>
+        </div>
+    </div>
+
+    <div class="section index_section2"></div>
+    <div class="section index_section3"></div>
+    <div class="section index_section4"></div>
+
+    <div class="section new_foot_login">
+        <div class="vertical_out">
+            <div class="vertical_in">
+                <div class="team_partner sc_display">
+                    <h2>智慧研学</h2>
+                    <div class="partner_name">
+                        <ul class="clearfix" id="schoolList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="zx_slogan sc_display"></div>
+                <div class="copyright_l2 tc">
+                    <a href="" target="_blank">备案号</a>
+                    <a href="" target="_blank" class="public">备案号</a>
+                    <a class="sc_display" href="" target="_blank">服务条款</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部结束-->
+
+<!--侧边按钮-->
+<div class="side_bar login" id="rightBtn">
+    <!--<a class="invite_parent" href="javascript:void(0);" target="_blank"><span>邀请<br/>家长</span></a>-->
+    <a class="cs_online aEm" target="_blank"
+       href=""><span>在线<br/>客服</span>
+        <em class="service_on service_download showEm" style="display: none;"><em>客服电话</em><b>400-000-0000</b></em>
+    </a>
+    <!--<a class="user_feedback" href="javascript:void(0);" target="_blank"><span>用户<br/>反馈</span></a>-->
+    <a class="download" href="" target="_blank"><span>下载<br/>体验</span>
+    </a>
+    <a id="btnBackTop" style="display:none;" class="back_top" href="javascript:void(0);"><span>返回<br/>顶部</span></a>
+</div>
+</body>
+</html>

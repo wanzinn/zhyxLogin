@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .slider-cotainer{
+        overflow: hidden;
+        position: relative;
+        height:450px;
+        width: 800px ;
+        margin:0 auto;
+    }
+        .slider-content{
+            position: absolute;
+            left:-800px;
+            top:0px;
+            list-style: none;
+            width:4800px;
+
+            overflow: hidden;
+        }
+        .slider-content li{
+            float:left;
+            height:450px;
+            position:relative;
+        }
+    .slider-content li span{
+        position:absolute;
+        display:inline-block;
+        font-size:60px;
+        color:orange;
+        left:50%;
+        top:50%;
+        width:100px;
+        height:100px;
+        margin-left:-50px;
+        margin-top:-50px;
+    }
+        .slider-content li img{
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+        }
+        .slider-cotainer i{
+            position: absolute;
+            width:81px;
+            height:136px;
+            cursor: pointer;
+        }
+        .slider-cotainer .prev{
+            top:200px;
+            left:0px;
+            background: url("http://cdn.attach.qdfuns.com/notes/pics/201701/01/203002r9xaaszztjtx222m.png") no-repeat;
+        }
+        .slider-cotainer .next{
+            top:200px;
+            right:0px;
+            background: url("http://cdn.attach.qdfuns.com/notes/pics/201701/01/202950gm3cwv62v54h3lp4.png") no-repeat;
+        }
+    </style>
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="slider-cotainer">
+        <ul class="slider-content">
+            <li>
+                <span>4</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/203003jb9nsxmbr9zcocil.jpg" alt="">
+            </li>
+            <li>
+                <span>1</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/202956d1ezc8bfzddc40dq.jpg" alt="">
+            </li>
+            <li>
+                <span>2</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/202955yls92s9w5uygwy19.jpg" alt="">
+            </li>
+            <li>
+                <span>3</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/202958pm4nddlzy7lyd4z4.jpg" alt="">
+            </li>
+            <li>
+                <span>4</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/203003jb9nsxmbr9zcocil.jpg" alt="">
+            </li>
+            <li>
+                <span>1</span>
+                <img src="http://cdn.attach.qdfuns.com/notes/pics/201701/01/202956d1ezc8bfzddc40dq.jpg" alt="">
+            </li>
+        </ul>
+        <i class="prev"></i>
+        <i class="next"></i>
+    </div>
+    <script>
+        var num = 1;
+        var slider = $('.slider-content');
+        $('.next').click(function () {
+            animate(1);
+        })
+        $('.prev').click(function () {
+            animate(-1);
+        })
+        function animate(dir) {
+            slider.stop(!0, !0).animate({"left": -(num+dir) * 800}, 500, "swing", function () {
+                if (dir> 0) {
+                    if (num>=4) {
+                        slider.css({"left": -800})
+                        num = 0;
+                    }
+                    num++;
+                }
+                if (dir < 0) {
+                    if (num<=1) {
+                        slider.css({"left": -3200})
+                        num = 5;
+                    }
+                    num--;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
